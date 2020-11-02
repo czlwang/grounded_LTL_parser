@@ -1,4 +1,4 @@
-# RL_Parser
+# grounded_LTL_parser
 This is the code for [Learning a natural-language to LTL executable semantic parser for grounded robotics](https://arxiv.org/abs/2008.03277)
 
 Attention mechanism implementation from [1]
@@ -10,20 +10,19 @@ Attention mechanism implementation from [1]
  - [Spot 2.9.3](https://spot.lrde.epita.fr/install.html)
 
 ## Install
-The execution environment and other python libraries are needed. We recommend creating a new virtual environment before proceeding.  In the RL_Parser directory, run the following:
+The execution environment and other python libraries are needed. We recommend creating a new virtual environment before proceeding.  In the cloned directory, run the following:
  1. `pip install -r requirements.txt`
- 2. `git submodule add git@github.com:czlwang/ltl-environment-dev.git ltl`
- 3. `git submodule init`
- 4. `git submodule update`
- 5. `pip install -e ltl`
+ 2. ~~`git submodule add git@github.com:czlwang/ltl-environment-dev.git ltl`~~
+ 3. ~~`git submodule init`~~
+ 4. ~~`git submodule update`~~
+ 5. ~~`pip install -e ltl`~~
 
 
 ## Data
-The data is at `victoria.csail.mit.edu:/storage/czw/rl_parser/data`
+~~The data is at `victoria.csail.mit.edu:/storage/czw/rl_parser/data`~~
+
 ## Run
- 1. `git checkout share_encoder`
- 2. `git checkout -b dylan_dev` (or whatever you want to name your branch)
- 3.  `CUDA_VISIBLE_DEVICES=0 ./reinforce.py configs/rl_parse_config.yml`(This will run for a LONG time. If you just want to check if everything is working, you set `train_split` to be smaller in the config.)
+`./reinforce.py configs/rl_parse_config.yml`(This will run for a long time. If you just want to check if everything is working, you set `train_split` to be smaller in the config.)
 
 ## Important config flags
 - `data_dir` should be set to wherever you put the data
