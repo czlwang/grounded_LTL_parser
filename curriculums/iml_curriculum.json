@@ -1,0 +1,46 @@
+[
+    {
+        "min_epoch": 0,
+        "max_epoch": 5,
+        "reward_type": "parse",
+        "loss_type": "parse",
+        "max_len": 3
+    },
+    {
+        "min_epoch": 5,
+        "max_epoch": 10,
+        "reward_type": "parse",
+        "loss_type": "parse",
+        "max_len": 7
+    },
+    {
+        "min_epoch": 10,
+        "max_epoch": 15,
+        "reward_type": "parse",
+        "loss_type": "parse",
+        "max_len": 11
+    },
+    {
+        "min_epoch": 15,
+        "max_epoch": 20,
+        "reward_type": "parse",
+        "loss_type": "parse",
+        "max_len": 15
+    },
+    {
+        "min_epoch": 20,
+        "max_epoch": 30,
+        "reward_type": "gen",
+        "loss_type": "gen",
+        "max_len": 15,
+        "beam_width": 1,
+        "decode_mode": "beam"
+    },
+    {
+        "min_epoch": 30,
+        "max_epoch": 40,
+        "reward_type": "parse_gen",
+        "loss_type": "parse",
+        "max_len": 15
+    }
+]

@@ -1,0 +1,24 @@
+out_dir: "mar-18/iterative_ml"
+description: "iterative_ml"
+
+cuda: 1
+data_dir: "/storage/czw/rl_parser/data/lambda/"
+dropout: 0.5
+hidden_size: 1000
+num_epochs: 200
+lr : !!float 1e-3
+val_batch_size: 64
+
+sort: True
+train_batch_size: 8
+decode_mode: "sample"
+train_mode: "rl"
+train_split: 512
+valid_only: True
+baseline: 0.00
+beam_width: 128
+beta: 0.0
+epsilon : !!float 0.20
+
+load_pretrained: False
+pretrained: "mar-6/debug/trained_model.pth"

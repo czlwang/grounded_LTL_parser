@@ -1,0 +1,35 @@
+out_dir: "may-29/debug"
+description: "ltl full MLE supervision. With negation."
+
+cuda: 0
+data_dir: "/storage/czw/rl_parser/data/ltl_sparse_w_negation/"
+#TODO dropout
+dropout: 0.2 
+hidden_size: 1000
+num_epochs: 60
+lr : !!float 1e-3
+val_batch_size: 64
+
+sort: False
+train_batch_size: 16
+decode_mode: "sample"
+#train types are iml, rl, ml
+train_mode: "ml"
+#model types are auto_enc, enc_dec
+model_type: "enc_dec"
+#score types are simulate, simulate_subset_pred, simulate_subset_obj
+score_type: "simulate"
+#loss types are parse, gen, parse_gen
+loss_type: "parse"
+train_split: 700
+val_split: 150
+checkpoint: True
+valid_only: True
+baseline: 0.00
+beam_width: 128
+beta: 0.0
+epsilon : !!float 0.15
+eval_only: False
+
+load_pretrained: False
+pretrained: "apr-29/debug3/checkpoint_iml_gen.pth"

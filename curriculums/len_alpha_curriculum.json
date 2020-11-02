@@ -1,0 +1,26 @@
+[
+    {
+        "min_epoch": 0,
+        "max_epoch": 10,
+        "max_len": 3,
+        "alpha": 10000
+    },
+    {
+        "min_epoch": 10,
+        "max_epoch": 20,
+        "max_len": 7,
+        "alpha": 1000
+    },
+    {
+        "min_epoch": 20,
+        "max_epoch": 30,
+        "max_len": 11,
+        "alpha": 100
+    },
+    {
+        "min_epoch": 30,
+        "max_epoch": 50,
+        "max_len": 15,
+        "alpha": 10
+    }
+]

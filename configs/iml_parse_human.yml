@@ -1,0 +1,45 @@
+out_dir: "jul-20/iml_parse_human"
+description: "debug"
+
+cuda: 0
+data_dir: "/storage/czw/rl_parser/data/1k_3_env_1_track_no_neg_human/"
+#TODO dropout
+dropout: 0.2 
+hidden_size: 1000
+num_epochs: 50
+lr : !!float 1e-3
+val_batch_size: 64
+
+sort: False
+train_batch_size: 8
+ml_train_batch_size: 16
+#types are beam, sample, and greedy
+decode_mode: "sample"
+#train types are iml, rl, ml
+train_mode: "iml"
+#only relevant for ml. should be False for everything else
+teacher_force: False
+#model types are auto_enc, enc_dec
+model_type: "auto_enc"
+#norm*, likelihood_only*, log*
+score_type: "norm_likelihood_only"
+#loss types are parse, gen, parse_gen. What goes into the loss function?
+loss_type: "parse"
+train_split: 700
+val_split: 150
+checkpoint: True
+valid_only: True
+baseline: 0.00
+beam_width: 128
+beta: 0.0
+epsilon : !!float 0.15
+eval_only: False
+planner_path: "ltl/craft_new_best_0708.pt"
+curriculum_path: "curriculums/len_curriculum.json"
+
+load_pretrained: False
+pretrained: "may-30/debug-unk/iml_checkpoint_40.pth"
+load_pretrained_score_cache: False
+load_pretrained_explore_cache: False
+load_pretrained_length_cache: False
+pickle_path: "jul-16/iml_parse/"
