@@ -12,10 +12,12 @@ Attention mechanism implementation from [1]
 ## Install
 The execution environment and other python libraries are needed. We recommend creating a new virtual environment before proceeding.  In the cloned directory, run the following:
  1. `git clone --recursive https://github.com/czlwang/grounded_LTL_parser.git`
- 2. `cd ltl-environment-dev`
- 3. `git checkout stable`
- 4. `pip install -e ltl-environment-dev`
- 5. `pip install -r requirements.txt`
+ 2. `git clone https://github.com/czlwang/ltl-environment-dev.git`
+ 3. `cd ltl-environment-dev`
+ 4. `git checkout stable`
+ 5. `cd ..`
+ 6. `pip install -e ltl-environment-dev`
+ 7. `pip install -r requirements.txt`
 
 
 ## Data
